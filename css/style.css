@@ -5,6 +5,15 @@ body {
   font-family: 'Lato';
 }
 
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: bottom;
+}
+
 .clearfix:after {
   display: block;
   content: "";
@@ -14,6 +23,7 @@ body {
 .title-font {
   font-family: Raleway;
 }
+
 
 /* ------------ header部分 ------------- */
 .header {
@@ -245,7 +255,6 @@ body {
 }
 
 .contact-inner li a {
-  display: inline-block;
   width: 185px;
   padding: 30px 40px;
   box-sizing: border-box;
