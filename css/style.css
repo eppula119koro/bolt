@@ -32,7 +32,7 @@ img {
   top: 0;
   left: 0;
   background-color: #FFF;
-  z-index: 1;
+  z-index: 1000;
 }
 
 .inner {
@@ -58,7 +58,7 @@ img {
   font-size: 12px;
   text-decoration: none;
   color: #FFF;
-  transition: all 0.3s;
+  transition: all .3s;
 }
 
 .header-inner__contact:hover {
@@ -71,7 +71,6 @@ img {
 }
 
 .title {
-  width: 100%;
   background-color: #f2f2f2;
 }
 
@@ -94,7 +93,6 @@ img {
 
 /* ------------ service部分 ------------- */
 .service {
-  width: 100%;
   background-color: #74cfae;
 }
 
@@ -109,7 +107,7 @@ img {
 .service-inner__text-block {
   width: 650px;
   text-align: center;
-  padding-top: 20px;
+  margin-top: 20px;
 }
 
 .service-title {
@@ -124,7 +122,6 @@ img {
 
 /* ------------ work部分 ------------- */
 .work {
-  width: 100%;
   background-color: #f2f2f2;
 }
 
@@ -148,8 +145,8 @@ img {
 }
 
 .work-inner__wrap li a {
-  opacity: 0.7;
-  transition: all 0.3s;
+  opacity: .7;
+  transition: all .3s;
 }
 
 .work-inner__wrap li a:hover {
@@ -188,7 +185,7 @@ img {
   text-decoration: none;
   color: #FFF;
   float: left;
-  transition: all 0.3s;
+  transition: all .3s;
 }
 
 .work-email:hover {
@@ -197,7 +194,6 @@ img {
 
 /* ------------ skill部分 ------------- */
 .skill {
-  width: 100%;
   background-color: #4e4e4e;
 }
 
@@ -212,7 +208,8 @@ img {
 }
 
 .skill-inner__img-wrap {
-  margin-top:60px;
+  margin-top: 60px;
+  text-align: center;
 }
 
 .skill-inner__img-wrap li {
@@ -225,19 +222,12 @@ img {
   margin-left: 0;
 }
 
-.skill-inner__img-wrap li figure img {
-  width: 100%;
-}
-
 .skill-inner__img-wrap li figure figcaption {
   margin-top: 15px;
   font-size: 16px;
-  text-align: center;
-
 }
 /* ------------ contact部分 ------------- */
 .contact {
-  width: 100%;
   background-color: #f2f2f2;
 }
 
@@ -260,7 +250,7 @@ img {
   box-sizing: border-box;
   color: #74cfae;
   background-color: #f2f2f2;
-  transition: all 0.3s;
+  transition: all .3s;
 }
 
 .contact-inner li a:hover  {
@@ -269,7 +259,6 @@ img {
 
 /* ------------ footer部分 ------------- */
 .footer {
-  width: 100%;
   background-color: #74cfae;
 }
 
