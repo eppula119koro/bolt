@@ -11,16 +11,22 @@ body {
   clear: both;
 }
 
+.title-font {
+  font-family: Raleway;
+}
+
 /* ------------ header部分 ------------- */
 .header {
   width: 100%;
   position: fixed;
+  top: 0;
+  left: 0;
   background-color: #FFF;
   z-index: 1;
 }
 
 .inner {
-  width: 960px;
+  width: 1100px;
   margin: 0 auto;
 }
 
@@ -50,6 +56,10 @@ body {
 }
 
 /* ------------ title部分 ------------- */
+.main-top {
+  margin-top: 70px;
+}
+
 .title {
   width: 100%;
   background-color: #f2f2f2;
@@ -57,19 +67,19 @@ body {
 
 .title-inner {
   text-align: center;
-  padding: 320px 0 250px 0;
+  padding: 250px 0;
 }
 
 .title-inner__theme {
   font-size: 90px;
   font-weight: 700;
   color: #74cfae;
-  margin-bottom: 20px;
 }
 
 .title-inner__lead {
   font-size: 30px;
   color: #c0c0c0;
+  margin-top: 20px;
 }
 
 /* ------------ service部分 ------------- */
@@ -94,13 +104,12 @@ body {
 
 .service-title {
   font-size: 24px;
-  margin-bottom: 35px;
-  font-family: Raleway;
 }
 
 .service-lead {
   font-size: 20px;
   line-height: 1.5;
+  margin-top: 35px;
 }
 
 /* ------------ work部分 ------------- */
@@ -115,46 +124,43 @@ body {
 
 .work-inner__title {
   font-size: 24px;
-  margin-bottom: 40px;
   text-align: center;
   color: #333;
-  font-family: Raleway;
 }
 
-.work-link {
-  display: block;
+.work-inner__wrap {
+  margin-top: 40px;
+}
+
+.work-img {
   float: left;
-  width: calc((100% - 200px) / 3);
   margin: 80px 0 0 100px;
+}
+
+.work-img__link {
   opacity: 0.7;
   transition: all 0.3s;
 }
 
-.work-link:hover {
+.work-img__link:hover {
   opacity: 1;
 }
 
-.work-link__img {
-  width: 100%;
-}
-
-.work-link:nth-child(3n+1) {
+.work-img:nth-child(3n+1) {
   margin-left: 0;
 }
 
-.work-link:nth-child(-n+3) {
+.work-img:nth-child(-n+3) {
   margin-top: 0;
 }
 
 .work-inner__text {
-  padding-top: 90px;
-  font-family: Raleway;
   width: 800px;
-  margin: 0 auto;
+  margin: 90px auto 0 auto;
 }
 
 .work-text {
-  width: 540px;
+  width: 510px;
   margin-right: 90px;
   font-size: 18px;
   font-weight: 300;
@@ -256,8 +262,6 @@ body {
 }
 
 .footer-inner {
-  width: 800px;
-  margin: 0 auto;
   padding: 20px 0 25px 0;
 }
 
