@@ -14,15 +14,13 @@ img {
   vertical-align: bottom;
 }
 
-.clearfix:after {
-  display: block;
-  content: "";
-  clear: both;
-}
-
 .title-font {
   font-family: Raleway;
 }
+
+.br-sp {
+    display: none;
+  }
 
 
 /* ------------ header部分 ------------- */
@@ -50,6 +48,10 @@ img {
 .header-inner__logo {
   font-size: 40px;
   color: #4e4e4e;
+}
+
+.header-inner__menu {
+  display: none;
 }
 
 .header-inner__contact {
@@ -137,11 +139,20 @@ img {
 
 .work-inner__wrap {
   margin-top: 40px;
+  font-size: 0;
 }
 
 .work-inner__wrap li {
-  float: left;
+  display: inline-block;
   margin: 80px 0 0 100px;
+}
+
+.work-inner__wrap li:nth-child(3n+1) {
+  margin-left: 0;
+}
+
+.work-inner__wrap li:nth-child(-n+3) {
+  margin-top: 0;
 }
 
 .work-inner__wrap li a {
@@ -153,38 +164,29 @@ img {
   opacity: 1;
 }
 
-.work-inner__wrap li:nth-child(3n+1) {
-  margin-left: 0;
-}
-
-.work-inner__wrap li:nth-child(-n+3) {
-  margin-top: 0;
-}
-
 .work-inner__text {
-  width: 800px;
   margin: 90px auto 0 auto;
+  text-align: center;
+  font-size: 0;
 }
 
 .work-text {
+  display: inline-block;
   width: 510px;
   font-size: 18px;
   font-weight: 300;
   line-height: 1.4;
-  text-align: center;
   color: #333;
-  float: left;
 }
 
 .work-email {
-  display: block;
   font-size: 12px;
   padding: 14px 20px;
   margin-left: 90px;
   background-color: #74cfae;
   text-decoration: none;
+  vertical-align: top;
   color: #FFF;
-  float: left;
   transition: all .3s;
 }
 
@@ -215,7 +217,6 @@ img {
 .skill-inner__img-wrap li {
   display: inline-block;
   margin-left: 180px;
-  width: calc((100% - 540px) / 4);
 }
 
 .skill-inner__img-wrap li:first-child {
@@ -232,10 +233,9 @@ img {
 }
 
 .contact-inner {
-  width: 740px;
-  margin: 0 auto;
   padding: 200px 0;
-  font-size: 0px;
+  font-size: 0;
+  text-align: center;
 }
 
 .contact-inner li {
@@ -268,4 +268,137 @@ img {
 
 .footer-inner__text {
   text-align: right;
+}
+
+/* -------------------- TABサイズ以下 ------------------------------- */
+@media screen and ( max-width:1199px) {
+  .inner {
+    width:97%;
+  }
+
+  /* ------------ service部分 ------------- */
+  .service-inner {
+    flex-direction: column;
+    padding: 50px 0 25px 0;
+    align-items: center;
+  }
+
+  /* ------------ work部分 ------------- */
+  .work-inner__wrap {
+    text-align: center;
+  }
+
+  .work-inner__wrap li {
+    width: 100%;
+    display: block;
+    margin: 0;
+  }
+
+  .work-inner__wrap li:nth-child(3n+4) {
+    margin-top: 80px;
+  }
+
+  .work-inner__text {
+    margin-top: 80px;
+  }
+
+  .work-text {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .work-email {
+    margin: 40px 0 0 0;
+  }
+  /* ------------ skill部分 ------------- */
+  .skill-inner__img-wrap li {
+    width: 100%;
+    margin: 88px 0 0 0;
+  }
+
+  .skill-inner__img-wrap li:first-child {
+    margin-top: 0;
+  }
+}
+
+/* -------------------- SPサイズ以下 ------------------------------- */
+@media screen and ( max-width:767px) {
+  .br-sp {
+    display: block;
+  }
+
+/* ------------ header部分 ------------- */
+  .header-inner {
+    flex-wrap: wrap;
+  }
+
+  .header-inner__menu {
+    display: block;
+    padding: 10px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .header-inner__contact {
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .btn-line {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 3px;
+    background-color: #ddd;
+  }
+
+  .btn-line::before, .btn-line::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+  }
+
+  .btn-line::before {
+    top: 7px
+  }
+
+  .btn-line::after {
+    top: 15px;
+  }
+
+/* ------------ title部分 ------------- */
+  .title-inner {
+    padding: 160px 0 130px 0;
+  }
+
+  .theme-inner {
+  padding: 160px 0 130px 0;
+
+  }
+
+/* ------------ service部分 ------------- */
+  .service-inner__text-block {
+    width: 100%;
+  }
+
+/* ------------ contact部分 ------------- */
+  .contact-inner {
+    padding: 50px 15px 200px 15px;
+    box-sizing: border-box;
+  }
+
+  .contact-inner li {
+    display: block;
+  }
+
+  .contact-inner li a {
+    width: 100%;
+  }
 }
